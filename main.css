@@ -1,0 +1,30 @@
+.top
+{
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    min-height: 4rem;
+    background-color : rgb(172, 33, 84);
+}
+
+body
+{
+}
+
+p.text
+{
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+ font-size: 150%;
+}
+
+.logo{
+  width: 75px;
+  padding-left: 20px;
+  padding-top: 7px;
+}
+
+.shadow {
+  position: relative;
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
