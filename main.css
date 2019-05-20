@@ -31,7 +31,8 @@ p.text
 
 .carousel {
 
-  height: 500px;
+  height: 80%;
+
 }
 
 .chalenge, .tips{
@@ -75,47 +76,16 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-/* Gabriela amorzinho */
-.heart {
-  background-color: red;
-  display: inline-block;
-  height: 30px;
-  margin: 0 10px;
-  position: relative;
-  top: 0;
-  transform: rotate(-45deg);
-  width: 30px;
-}
-
-.heart:before,
-.heart:after {
-  content: "";
-  background-color: red;
-  border-radius: 50%;
-  height: 30px;
-  position: absolute;
-  width: 30px;
-}
-
-.heart:before {
-  top: -15px;
-  left: 0;
-}
-
-.heart:after {
-  left: 15px;
-  top: 0;
-}
 .col-sm-5.col-md-5.mt-5.mr-5.imc-box{
   background-color: pink;
-  height: 462px;
+  height: 90%;
   padding-right: 0px;
     padding-left: 0px;
 }
 .imc-titulo{
   background-color: #00ACC1;
   color: white;
-  padding: 13px 16px 8px;
+  padding: 2% 3% 1%;
   /* border-top-right-radius: 8px; */
   /* border-top-left-radius: 8px; */
   font-family: arial,sans-serif;
@@ -197,20 +167,21 @@ input[type="number"] {
 {
 float: right;
 margin-right: 5%;
+margin-bottom: 1%;
 }
 .div-desafios{
   border: 1px groove rgba(0, 123, 255, 0.35);
 }
 .img-calendar{
-
+  padding-top: 1%;
 }
 .titulo-desafio{
-  margin-top: 10px;
-  margin-right: 200px;
+  margin-top: 2%;
+  margin-right: 20%;
   /* margin-left: 20px; */
 }
 .cronograma{
-  padding-left: 150px;
+  padding-left: 25%;
 }
 .button-gerar-exercicio{
     /* margin-top: 10px; */
