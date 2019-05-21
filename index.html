@@ -73,7 +73,7 @@
           <div class="input-peso">
             <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="640" aria-labelledby="label-peso lPZCo"
               aria-valuemin="0" min="0" type="number" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
-              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC">
+              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="weightId">
             <span class="byTLfd" aria-label="quilogramas" aria-hidden="true" id="lPZCo">kg</span>
           </div>
 
@@ -81,17 +81,17 @@
           <div class="input-peso">
             <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="640" aria-labelledby="label-altura lPZCo"
               aria-valuemin="0" min="0" type="number" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
-              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC">
+              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="heightId">
             <span class="byTLfd" aria-label="altura" aria-hidden="true" id="lPZCo">cm</span>
           </div>
         </div>
 
         <div class="imc-calculo-buttom">
-          <button type="submit" onclick="calculateImc()" class="btn btn-success">Calcular</button>
+          <button type="submit" data-toggle="modal" data-target="#modalResultado" class="btn btn-success" onclick="calculateImc()">Calcular</button>
         </div>
 
         <div class="imc-ajuda-buttom">
-          <button type="submit" onclick="calculateImc()" class="btn btn-success ajuda">
+          <button type="submit" class="btn btn-success ajuda" data-toggle="modal" data-target="#modalExemplo">
             <i data-feather="help-circle"></i>
             <script>
               feather.replace()
@@ -175,5 +175,63 @@
     </div>
   </div>
   <!-- Fim paginação -->
+  <div class="modal fade bd-example-modal-xl"  id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Calculo de IMC (Indice de Massa Corporal)</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.
+          <br>O IMC é determinado pela divisão da massa do indivíduo pelo quadrado de sua altura, em que a massa está em quilogramas e a altura em metros.</p>
+          <div style="padding-left: 40%;padding-bottom: 1%;">
+                      <img src="Imagens/Home/imc-calculo.svg" alt="" style="width: 30%;">
+          </div>
+        <img src="Imagens/Home/imc-faixa.png" alt="" style="width: 100%;">
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade bd-example-modal-xl"  id="modalResultado" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Calculo de IMC (Indice de Massa Corporal) - Resultado</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">          
+            <h3>
+            Seu Resultado:
+          </h3>          
+          <h3 id="resultImcId">
+          </h3>
+          <h6 id="resultTextId">
+            </h6>
+          <hr>
+            <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.
+            <br>O IMC é determinado pela divisão da massa do indivíduo pelo quadrado de sua altura, em que a massa está em quilogramas e a altura em metros.</p>
+            <div style="padding-left: 40%;padding-bottom: 1%;">
+                        <img src="Imagens/Home/imc-calculo.svg" alt="" style="width: 30%;">
+            </div>
+          <img src="Imagens/Home/imc-faixa.png" alt="" style="width: 100%;">
+
+
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
 </body>
 </html>

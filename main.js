@@ -1,4 +1,5 @@
 function calculateImc() {
+
     var weight = document.getElementById('weightId').value;
     var height = document.getElementById('heightId').value / 100;
 
