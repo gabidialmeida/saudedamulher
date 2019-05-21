@@ -5,8 +5,16 @@ function calculateImc() {
 
     var result = weight / Math.pow(height, 2);
 
+    if(getWeightStatus(result))
+    {   
+    console.log("ok"); 
+    document.getElementById('btn-calculo').setAttribute("data-target", "#modalResultado");
     document.getElementById('resultImcId').innerHTML = result.toFixed(2);
     document.getElementById('resultTextId').innerHTML = getWeightStatus(result);
+    }
+    else{
+        alert("É necessário preencher com altura e peso.")
+    }
 }
 
 function getWeightStatus(imc) {
