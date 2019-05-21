@@ -87,7 +87,7 @@
         </div>
 
         <div class="imc-calculo-buttom">
-          <button type="submit" data-toggle="modal" class="btn btn-success" onclick="calculateImc()" id="btn-calculo">Calcular</button>
+          <button type="submit" data-toggle="modal" class="btn btn-success" onclick="calculateImc()" id>Calcular</button>
         </div>
 
         <div class="imc-ajuda-buttom">
@@ -103,8 +103,7 @@
     </div>
   </div>
 
-  <!-- Desafios -->
-  <div class="pl-5">
+  <!-- Desafios   <div class="pl-5">
     <div class="row">
       <div class="col-sm-6 col-md-6 mt-5 mr-5">
         <div class="div-desafios">
@@ -133,7 +132,40 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
+      <div class="pl-5">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 mt-5 mr-5">
+    
+              <form id="myOverlay" class="card " action="./DesafiosSeteDias.html" method="GET">
+            <div class="div-desafios">
+              <div class="row">
+                <div class="img-calendar col col-lg-2">
+                  <img src="Imagens/Home/calendar_7_icon.png" width="80%">
+                </div>
+                <div class="titulo-desafio col">
+                  <h3>Desafio dos 7 dias</h3>
+                  <h6>Gere um cronograma Semanal de Exercicios</h6>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group cronograma col-8">
+                  <label for="inputState" style="margin-left: 20%;margin-top: 5%;">Qual o seu objetivo?</label>
+                  <select required class="form-control filtro" name="itemSelected" id="itemSelected">
+                      <option value="">Selecione um objetivo:</option>                            
+                      <option value="0">Ganhar Peso</option>
+                      <option value="1">Manter Peso</option>
+                      <option value="2">Perder Peso</option>
+                    </select>
+                </div>
+                <div class="button-gerar-exercicio col-3" style="margin-top: 42px;">
+                    <button class="btn btn-primary busca" onclick="setaDadosSearchItem(this.id);">
+                        Vamos Lá!</button>
+                </div>
+              </div>
+            </div>
+              </form>
+          </div>
 
 <!-- Dicas nutrição -->
 
