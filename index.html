@@ -75,15 +75,15 @@
             <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="640" aria-labelledby="label-peso lPZCo"
               aria-valuemin="0" min="0" type="number" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
               jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="weightId">
-            <span class="byTLfd" aria-label="quilogramas" aria-hidden="true" id="lPZCo">kg</span>
+            <span class="byTLfd" aria-label="quilogramas" aria-hidden="true" id="lPZCo">kg *</span>
           </div>
 
           <div class="imc-label" id="label-altura" style="padding-top: 20px;">Altura</div>
           <div class="input-peso">
-            <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="640" aria-labelledby="label-altura lPZCo"
+            <input onformchange="validate()" class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="640" aria-labelledby="label-altura lPZCo"
               aria-valuemin="0" min="0" type="number" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
               jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="heightId">
-            <span class="byTLfd" aria-label="altura" aria-hidden="true" id="lPZCo">cm</span>
+            <span class="byTLfd" aria-label="altura" aria-hidden="true" id="lPZCo">cm *</span>
           </div>
         </div>
 
@@ -97,6 +97,7 @@
             <script>
               feather.replace()
             </script></button>
+            <span class="byTLfd" aria-label="quilogramas" aria-hidden="true" id="lPZCo" style="padding-left: 10px;">*campos obrigatórios</span>
         </div>
 
 
@@ -145,16 +146,41 @@
   <div id="carouselNutri" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <a href="AlimentosAntioxidantes.html"> <img class="d-block imagem-nut" src="Imagens/Home/nut1.jpeg" alt="First slide"></a>
+        <div class="row">
+            <a href="AlimentosAntioxidantes.html"> 
+            <div class="col col-lg">
+             <img class="d-block imagem-nut" src="Imagens/Home/nut1.jpeg" alt="First slide"></a>
+             </div>
+            <div class="col descr-nut">
+               <h3>Alimentos <br>Antioxidantes</h3>
+            </div>
+        </div>
+       
       </div>
 
       <div class="carousel-item">
-          <a href="AlimentosTermogenicos.html"><img class="d-block imagem-nut" src="Imagens/Home/nut2.jpeg" alt="Second slide"></a>
-      </div>
+          <div class="row">
+              <a href="AlimentosTermogenicos.html"> 
+              <div class="col col-lg">
+               <img class="d-block imagem-nut" src="Imagens/Home/nut2.jpeg" alt="Second slide"></a>
+               </div>
+              <div class="col descr-nut">
+                 <h3>Alimentos <br>Termogenicos</h3>
+              </div>
+          </div>
+        </div>
 
       <div class="carousel-item">
-          <a href="GruposAlimentares.html"><img class="d-block imagem-nut" src="Imagens/Home/nut3.jpeg" alt="Third slide"></a>
-      </div>
+          <div class="row">
+              <a href="GruposAlimentares.html"> 
+              <div class="col col-lg">
+               <img class="d-block imagem-nut" src="Imagens/Home/nut3.jpeg" alt="Third slide"></a>
+               </div>
+              <div class="col descr-nut">
+                 <h3>Grupos <br>Alimentares</h3>
+              </div>
+          </div>
+        </div>
 
       <!-- <div class="carousel-item">
           <a href=""><img class="d-block imagem-nut" src="Imagens/Home/nut4.jpg" alt="Fourth slide"></a>

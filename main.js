@@ -17,6 +17,16 @@ function calculateImc() {
     }
 }
 
+function validate(){
+    x=document.getElementById('heightId')
+    txt=x.value
+    if (txt>=1 && txt<=5) {
+        return true
+    }else{
+        alert("Must be between 1 and 5")
+        return false
+    }
+}
 function getWeightStatus(imc) {
     if (imc < 16) {
         return 'Magreza Grave';
