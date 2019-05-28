@@ -1,9 +1,7 @@
-.top
+.top,.navbar.navbar-expand.beta-menunavbar-dropdown.align-items-center.navbar-toggleable-sm.top
 {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    min-height: 4rem;
-    background-color : rgb(172, 33, 84);
+  border-bottom: 2px dotted rgb(217, 119, 155) !important;
+
 }
 
 body
