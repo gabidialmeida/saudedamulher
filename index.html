@@ -16,6 +16,9 @@
   <script type="text/javascript" src="./node_modules/feather-icons/dist/feather.min.js"></script>
   <script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+  <script src="jquery.min.js"></script>
+<script src="jquery.mask.min.js"></script>
 </head>
 <style>
   a:link{
@@ -77,25 +80,18 @@
         <div class="form-group imc-form">
           <div class="imc-label" id="label-peso">Peso</div>
           <div class="input-peso">
-            <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" aria-labelledby="label-peso lPZCo"
-              aria-valuemin="0" type="number" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
-              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="weightId" maxlength="3" min="0" max="999">
-            <span class="byTLfd" aria-label="quilogramas" aria-hidden="true" id="lPZCo">kg</span>
-            <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="640" aria-labelledby="label-peso lPZCo"
-              aria-valuemin="0" min="0" type="number" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
-              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="weightId">
+
+            <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ money" aria-valuemax="640" data-conversion-factor="1" max="640" aria-labelledby="label-peso lPZCo"
+              aria-valuemin="0" min="0" type="tel" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
+              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="weightId" maxlength="4" onkeypress="return somenteNumeros(event)" required>
             <span class="byTLfd" aria-label="quilogramas" aria-hidden="true" id="lPZCo">kg *</span>
           </div>
 
           <div class="imc-label" id="label-altura" style="padding-top: 20px;">Altura</div>
           <div class="input-peso">
-            <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1"Z aria-labelledby="label-altura lPZCo"
-              aria-valuemin="0" type="number" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
-              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="heightId" maxlength="3" min="0" max="999">
-            <span class="byTLfd" aria-label="altura" aria-hidden="true" id="lPZCo">cm</span>
             <input onformchange="validate()" class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="640" aria-labelledby="label-altura lPZCo"
-              aria-valuemin="0" min="0" type="number" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
-              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="heightId">
+              aria-valuemin="0" min="0" type="tel" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
+              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="heightId" maxlength="3" onkeypress="return somenteNumeros(event)" required > 
             <span class="byTLfd" aria-label="altura" aria-hidden="true" id="lPZCo">cm *</span>
           </div>
         </div>
@@ -272,5 +268,25 @@
       </div>
     </div>
 
+<script>
+$("#weightId").mask("##,##");
+function somenteNumeros(e) {
+    var charCode = e.charCode ? e.charCode : e.keyCode;
+    // charCode 8 = backspace   
+    // charCode 9 = tab
+   if (charCode != 8 && charCode != 9) {
+       // charCode 48 equivale a 0   
+       // charCode 57 equivale a 9
+       var max = 3;
+       var num = document.getElementById('num');           
+            
+       if ((charCode < 48 || charCode > 57)||(num.value.length >= max)) {
+          return false;
+       }
+       
+    }
+
+}
+</script>
 </body>
 </html>
