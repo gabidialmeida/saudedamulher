@@ -65,3 +65,7 @@ function getWeightStatus(imc) {
         return 'Obesidade grau 3';
     }
 }
+function limparCamposIMC(){
+    var weight = document.getElementById('weightId').value="";
+    var height = document.getElementById('heightId').value="";
+}
