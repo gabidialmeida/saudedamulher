@@ -1,22 +1,49 @@
-function calculateImc() {
+function calculateImc() {    
 
     var weight = document.getElementById('weightId').value;
     var height = document.getElementById('heightId').value / 100;
 
-    var result = weight / Math.pow(height, 2);
+    if((weight != "" ) && ( height != 0)){
+        var result = weight / Math.pow(height, 2);
 
-    if(getWeightStatus(result))
-    {   
-    console.log("ok"); 
-    document.getElementById('btn-calculo').setAttribute("data-target", "#modalResultado");
-    document.getElementById('resultImcId').innerHTML = result.toFixed(2);
-    document.getElementById('resultTextId').innerHTML = getWeightStatus(result);
+        if(getWeightStatus(result))
+        {   
+            console.log("ok"); 
+            document.getElementById('btn-calculo').setAttribute("data-target", "#modalResultado");
+            document.getElementById('resultImcId').innerHTML = result.toFixed(2);
+            document.getElementById('resultTextId').innerHTML = getWeightStatus(result);
+
+            if( getWeightStatus(result)==='Abaixo do Peso'||  getWeightStatus(result)==='Magreza Grave'|| getWeightStatus(result)==='Muito Abaixo do Peso'){
+                document.getElementById('linkDica').innerHTML = "Dicas para Aumentar o peso";
+                document.getElementById('linkDica').setAttribute("href","./DesafiosSeteDias.html?itemSelected=0");
+            }
+            else if(getWeightStatus(result)==='Peso Normal'){
+                document.getElementById('linkDica').innerHTML = "Dicas para Manter o peso";
+                document.getElementById('linkDica').setAttribute("href","./DesafiosSeteDias.html?itemSelected=1");
+            }
+            else{
+                document.getElementById('linkDica').innerHTML = "Dicas para Perder peso";
+                document.getElementById('linkDica').setAttribute("href","./DesafiosSeteDias.html?itemSelected=2");
+            }
+        }
     }
-    else{
-        alert("É necessário preencher com altura e peso.")
+    else
+    {                
+        alert("É necessário preencher com altura e peso.");
     }
 }
 
+function validate(){
+    x=document.getElementById('heightId')
+    txt=x.value
+    if (txt>=1 && txt<=5) {
+        return true
+    }
+    else {
+        alert("Must be between 1 and 5")
+        return false
+    }
+}
 function getWeightStatus(imc) {
     if (imc < 16) {
         return 'Magreza Grave';

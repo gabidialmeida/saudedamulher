@@ -16,8 +16,19 @@
   <script type="text/javascript" src="./node_modules/feather-icons/dist/feather.min.js"></script>
   <script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-</head>
 
+  <script src="jquery.min.js"></script>
+<script src="jquery.mask.min.js"></script>
+</head>
+<style>
+  a:link{
+    text-decoration: none;
+  }
+  .margemCarossel{
+    margin-top: 15%;
+    color: black;
+  }
+</style>
 <body>
 
   <div class="top">
@@ -31,23 +42,25 @@
         <div id="carouselExercices" class="carousel slide exerc" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="Imagens/Home/ex2.jpg" alt="First slide">
+              <img class="d-block w-100" src="Imagens/Home/ex2.jpg" alt="First slide" href="DicasExercicios.html">
               <div class="carousel-caption d-none d-md-block">
-                <a href="DicasExercicios.html"><h5 style="color: white;">Dicas de Exercicios</h5></a>
+                <a href="DicasExercicios.html"><h5 style="color: white;">Dicas de Exercícios Intensos</h5>
+                <p style="color: white;">Exercícios para quem busca aumentar o preparo físico</p></a>
+               
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="Imagens/Home/ex1.jpg" alt="Second slide">
+              <img class="d-block w-100" src="Imagens/Home/ex1.jpg" alt="Second slide" href="DicasExercicios.html">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Teste2</h5>
-                <p>para2</p>
+                <a href="DicasExercicios.html"><h5 style="color: black;">Dicas de Exercícios Leves</h5>
+                <p style="color: black;">Exercícios para quem busca afastar o sedentarismo</p></a>               
               </div>
             </div> 
             <div class="carousel-item">
-              <img class="d-block w-100" src="Imagens/Home/ex3.jpg" alt="Third slide">
+              <img class="d-block w-100" src="Imagens/Home/ex3.jpg" alt="Third slide" href="DicasExercicios.html">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Teste3</h5>
-                <p>para3</p>
+                <a href="DicasExercicios.html"><h5 style="color: white;">Dicas de Exercícios Rápidos</h5>
+                <p style="color: white;">Exercícios para quem leva uma rotina agitada</p></a>
               </div>
             </div> 
           </div>
@@ -71,23 +84,24 @@
         <div class="form-group imc-form">
           <div class="imc-label" id="label-peso">Peso</div>
           <div class="input-peso">
-            <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="640" aria-labelledby="label-peso lPZCo"
-              aria-valuemin="0" min="0" type="number" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
-              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="weightId">
-            <span class="byTLfd" aria-label="quilogramas" aria-hidden="true" id="lPZCo">kg</span>
+
+            <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ money" aria-valuemax="640" data-conversion-factor="1" max="200" aria-labelledby="label-peso lPZCo"
+              aria-valuemin="0" min="0" type="tel" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
+              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="weightId" maxlength="5" onkeypress="return somenteNumeros(event)" required>
+            <span class="byTLfd" aria-label="quilogramas" aria-hidden="true" id="lPZCo">kg *</span>
           </div>
 
           <div class="imc-label" id="label-altura" style="padding-top: 20px;">Altura</div>
           <div class="input-peso">
-            <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="640" aria-labelledby="label-altura lPZCo"
-              aria-valuemin="0" min="0" type="number" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
-              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="heightId">
-            <span class="byTLfd" aria-label="altura" aria-hidden="true" id="lPZCo">cm</span>
+            <input onformchange="validate()" class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="200" aria-labelledby="label-altura lPZCo"
+              aria-valuemin="0" min="0" type="tel" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
+              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="heightId" maxlength="3" onkeypress="return somenteNumeros(event)" required > 
+            <span class="byTLfd" aria-label="altura" aria-hidden="true" id="lPZCo">cm *</span>
           </div>
         </div>
 
         <div class="imc-calculo-buttom">
-          <button type="submit" data-toggle="modal" class="btn btn-success" onclick="calculateImc()" id>Calcular</button>
+          <button type="submit" data-toggle="modal" class="btn btn-success" id="btn-calculo" onclick="calculateImc()" id data-target="">Calcular</button>
         </div>
 
         <div class="imc-ajuda-buttom">
@@ -96,6 +110,7 @@
             <script>
               feather.replace()
             </script></button>
+            <span class="byTLfd" aria-label="quilogramas" aria-hidden="true" id="lPZCo" style="padding-left: 10px;">*campos obrigatórios</span>
         </div>
 
 
@@ -144,16 +159,47 @@
   <div id="carouselNutri" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <a href="AlimentosAntioxidantes.html"> <img class="d-block imagem-nut" src="Imagens/Home/nut1.jpeg" alt="First slide"></a>
+        <div class="row">
+            <a href="AlimentosAntioxidantes.html"> 
+            <div class="col col-lg">
+             <img class="d-block imagem-nut" src="Imagens/Home/nut1.jpeg" alt="First slide"></a>
+             </div>
+            <div class="col descr-nut">
+                <a href="AlimentosAntioxidantes.html"> 
+               <h3 class="margemCarossel">Alimentos <br>Antioxidantes</h3><br>
+               </a>
+            </div>
+        </div>
+       
       </div>
 
       <div class="carousel-item">
-          <a href="AlimentosTermogenicos.html"><img class="d-block imagem-nut" src="Imagens/Home/nut2.jpeg" alt="Second slide"></a>
-      </div>
+          <div class="row">
+              <a href="AlimentosTermogenicos.html"> 
+              <div class="col col-lg">
+               <img class="d-block imagem-nut" src="Imagens/Home/nut2.jpeg" alt="Second slide"></a>
+               </div>
+              <div class="col descr-nut">
+                  <a href="AlimentosAntioxidantes.html"> 
+                 <h3 class="margemCarossel">Alimentos <br>Termogenicos</h3>
+                 </a>
+              </div>
+          </div>
+        </div>
 
       <div class="carousel-item">
-          <a href="GruposAlimentares.html"><img class="d-block imagem-nut" src="Imagens/Home/nut3.jpeg" alt="Third slide"></a>
-      </div>
+          <div class="row">
+              <a href="GruposAlimentares.html"> 
+              <div class="col col-lg">
+               <img class="d-block imagem-nut" src="Imagens/Home/nut3.jpeg" alt="Third slide"></a>
+               </div>
+              <div class="col descr-nut">
+                  <a href="AlimentosAntioxidantes.html"> 
+                 <h3 class="margemCarossel">Grupos <br>Alimentares</h3>
+                 </a>
+              </div>
+          </div>
+        </div>
 
       <!-- <div class="carousel-item">
           <a href=""><img class="d-block imagem-nut" src="Imagens/Home/nut4.jpg" alt="Fourth slide"></a>
@@ -195,7 +241,7 @@
       </div>
     </div>
   </div>
-
+<!-- Modal resultado-->
   <div class="modal fade bd-example-modal-xl"  id="modalResultado" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
@@ -212,6 +258,8 @@
           <h3 id="resultImcId">
           </h3>
           <h6 id="resultTextId">
+            </h6>
+            <h6 id="dicaExercicio"> <a href="" id="linkDica"> teste</a>
             </h6>
           <hr>
             <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.
@@ -230,5 +278,26 @@
       </div>
     </div>
 
+<script>
+$("#weightId").mask("###.#",{reverse: true});
+
+function somenteNumeros(e) {
+    var charCode = e.charCode ? e.charCode : e.keyCode;
+    // charCode 8 = backspace   
+    // charCode 9 = tab
+   if (charCode != 8 && charCode != 9) {
+       // charCode 48 equivale a 0   
+       // charCode 57 equivale a 9
+       var max = 3;
+       var num = document.getElementById('num');           
+            
+       if ((charCode < 48 || charCode > 57)||(num.value.length >= max)) {
+          return false;
+       }
+       
+    }
+
+}
+</script>
 </body>
 </html>
