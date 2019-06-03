@@ -93,7 +93,7 @@
 
           <div class="imc-label" id="label-altura" style="padding-top: 20px;">Altura</div>
           <div class="input-peso">
-            <input onformchange="validate()" class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="200" aria-labelledby="label-altura lPZCo"
+            <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="640" aria-labelledby="label-altura lPZCo"
               aria-valuemin="0" min="0" type="tel" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
               jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="heightId" maxlength="3" onkeypress="return somenteNumeros(event)" required > 
             <span class="byTLfd" aria-label="altura" aria-hidden="true" id="lPZCo">cm *</span>
@@ -110,7 +110,7 @@
             <script>
               feather.replace()
             </script></button>
-            <span class="byTLfd" aria-label="quilogramas" aria-hidden="true" id="lPZCo" style="padding-left: 10px;">*campos obrigatórios</span>
+            <span class="byTLfd" aria-label="quilogramas" aria-hidden="true" id="lPZCo" style="padding-left: 10px;">*Campos Obrigatórios <p style="padding-left: 10px;" class="byTLfd">*Digite apenas números</p></span>
         </div>
 
 
@@ -247,7 +247,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Calculo de IMC (Indice de Massa Corporal) - Resultado</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" onclick="limparCamposIMC()">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -268,11 +268,9 @@
                         <img src="Imagens/Home/imc-calculo.svg" alt="" style="width: 30%;">
             </div>
           <img src="Imagens/Home/imc-faixa.png" alt="" style="width: 100%;">
-
-
           </div>
           <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="limparCamposIMC()">Fechar</button>
             </div>
         </div>
       </div>
