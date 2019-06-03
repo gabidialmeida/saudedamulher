@@ -68,4 +68,5 @@ function getWeightStatus(imc) {
 function limparCamposIMC(){
     var weight = document.getElementById('weightId').value="";
     var height = document.getElementById('heightId').value="";
+    document.getElementById('btn-calculo').setAttribute("data-target", "");
 }
