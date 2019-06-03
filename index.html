@@ -24,6 +24,10 @@
   a:link{
     text-decoration: none;
   }
+  .margemCarossel{
+    margin-top: 15%;
+    color: black;
+  }
 </style>
 <body>
 
@@ -81,7 +85,7 @@
           <div class="imc-label" id="label-peso">Peso</div>
           <div class="input-peso">
 
-            <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ money" aria-valuemax="640" data-conversion-factor="1" max="640" aria-labelledby="label-peso lPZCo"
+            <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ money" aria-valuemax="640" data-conversion-factor="1" max="200" aria-labelledby="label-peso lPZCo"
               aria-valuemin="0" min="0" type="tel" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
               jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="weightId" maxlength="5" onkeypress="return somenteNumeros(event)" required>
             <span class="byTLfd" aria-label="quilogramas" aria-hidden="true" id="lPZCo">kg *</span>
@@ -90,7 +94,7 @@
           <div class="imc-label" id="label-altura" style="padding-top: 20px;">Altura</div>
           <div class="input-peso">
             <input onformchange="validate()" class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="200" aria-labelledby="label-altura lPZCo"
-              aria-valuemin="0" min="0" type="number" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
+              aria-valuemin="0" min="0" type="tel" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
               jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="heightId" maxlength="3" onkeypress="return somenteNumeros(event)" required > 
             <span class="byTLfd" aria-label="altura" aria-hidden="true" id="lPZCo">cm *</span>
           </div>
@@ -161,7 +165,9 @@
              <img class="d-block imagem-nut" src="Imagens/Home/nut1.jpeg" alt="First slide"></a>
              </div>
             <div class="col descr-nut">
-               <h3>Alimentos <br>Antioxidantes</h3>
+                <a href="AlimentosAntioxidantes.html"> 
+               <h3 class="margemCarossel">Alimentos <br>Antioxidantes</h3><br>
+               </a>
             </div>
         </div>
        
@@ -174,7 +180,9 @@
                <img class="d-block imagem-nut" src="Imagens/Home/nut2.jpeg" alt="Second slide"></a>
                </div>
               <div class="col descr-nut">
-                 <h3>Alimentos <br>Termogenicos</h3>
+                  <a href="AlimentosAntioxidantes.html"> 
+                 <h3 class="margemCarossel">Alimentos <br>Termogenicos</h3>
+                 </a>
               </div>
           </div>
         </div>
@@ -186,7 +194,9 @@
                <img class="d-block imagem-nut" src="Imagens/Home/nut3.jpeg" alt="Third slide"></a>
                </div>
               <div class="col descr-nut">
-                 <h3>Grupos <br>Alimentares</h3>
+                  <a href="AlimentosAntioxidantes.html"> 
+                 <h3 class="margemCarossel">Grupos <br>Alimentares</h3>
+                 </a>
               </div>
           </div>
         </div>
@@ -269,7 +279,7 @@
     </div>
 
 <script>
-$("#weightId").mask("###.#");
+$("#weightId").mask("###.#",{reverse: true});
 
 function somenteNumeros(e) {
     var charCode = e.charCode ? e.charCode : e.keyCode;
