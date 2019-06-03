@@ -83,14 +83,14 @@
 
             <input class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ money" aria-valuemax="640" data-conversion-factor="1" max="640" aria-labelledby="label-peso lPZCo"
               aria-valuemin="0" min="0" type="tel" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
-              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="weightId" maxlength="4" onkeypress="return somenteNumeros(event)" required>
+              jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="weightId" maxlength="5" onkeypress="return somenteNumeros(event)" required>
             <span class="byTLfd" aria-label="quilogramas" aria-hidden="true" id="lPZCo">kg *</span>
           </div>
 
           <div class="imc-label" id="label-altura" style="padding-top: 20px;">Altura</div>
           <div class="input-peso">
-            <input onformchange="validate()" class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="640" aria-labelledby="label-altura lPZCo"
-              aria-valuemin="0" min="0" type="tel" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
+            <input onformchange="validate()" class="imc-input Jue9g ikPiLTAvjx74-iyPBhGuSlvQ" aria-valuemax="640" data-conversion-factor="1" max="200" aria-labelledby="label-altura lPZCo"
+              aria-valuemin="0" min="0" type="number" jsaction="change:r.MUj7GIfNEWs;keyup:r.MUj7GIfNEWs" data-rtid="ikPiLTAvjx74"
               jsl="$x 1;" data-ved="2ahUKEwi1grvaraXiAhVAIrkGHR0LBFoQ1EAoADAAegQIDhAC" id="heightId" maxlength="3" onkeypress="return somenteNumeros(event)" required > 
             <span class="byTLfd" aria-label="altura" aria-hidden="true" id="lPZCo">cm *</span>
           </div>
@@ -269,7 +269,8 @@
     </div>
 
 <script>
-$("#weightId").mask("##.##");
+$("#weightId").mask("###.#");
+
 function somenteNumeros(e) {
     var charCode = e.charCode ? e.charCode : e.keyCode;
     // charCode 8 = backspace   
